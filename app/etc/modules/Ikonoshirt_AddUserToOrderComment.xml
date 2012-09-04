@@ -1,0 +1,9 @@
+<?xml version="1.0"?>
+<config>
+    <modules>
+        <Ikonoshirt_AddUserToOrderComment>
+            <active>true</active>
+            <codePool>community</codePool>
+        </Ikonoshirt_AddUserToOrderComment>
+    </modules>
+</config>
