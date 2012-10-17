@@ -11,7 +11,11 @@ class Ikonoshirt_AddUserToOrderComment_Model_Observer
      */
     public function addUserToOrderComment(Varien_Event_Observer $event)
     {
+        /* @var $statusHistory Mage_Sales_Model_Order_Status_History */
         $statusHistory = $event->getStatusHistory();
+        if($statusHistory->getId()) {
+            return;
+        }
 
         $adminSession = Mage::getSingleton('admin/session');
         if ($adminSession instanceof Mage_Admin_Model_Session) {
